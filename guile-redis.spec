@@ -14,6 +14,9 @@ BuildRequires:	pkgconfig
 Requires:	guile-libs >= 5:2.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_enable_debug_packages	0
+%define		_noautostrip		.*.go
+
 %description
 guile-redis is a Guile module for the Redis (<https://redis.io/>)
 key-value data store. It provides all commands up to Redis 7.0 and
